@@ -1,0 +1,134 @@
+nav {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+#social-media .bi {
+    transition: color 0.4s;
+}
+.bi-twitter-x:hover {
+    color: #000000;
+}
+.bi-facebook:hover {
+    color: #0866ff;
+}
+.bi-linkedin:hover {
+    color: #0a66c2;
+}
+.bi-github:hover {
+    color: #9199a5;
+}
+
+#hero-container {
+    background-image: url("https://images.unsplash.com/photo-1496167117681-944f702be1f4?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 33rem;
+}
+#company-video{
+    margin-top: -6.5rem;
+}
+.icon {
+    font-size: 3rem;
+    color: #3498db;
+}
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+}
+.feature-container:hover {
+    color: #f8f9fa;
+}
+.feature-container:hover .icon {
+    color: #f8f9fa;
+}
+.feature-container::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    transition: top 0.4s;
+    z-index: -1;
+}
+.feature-container:hover::before {
+    top: 0;
+}
+
+.services-container {
+    border: 1px double #adb5bd;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+.services-container:hover {
+    border-width: 1px;
+    border-color:#3498db;
+}
+
+.contact-us-information {
+    min-height: 37.25rem;
+}
+
+footer {
+    box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 766px) {
+    #contacts {
+        max-width: 25rem;
+    }
+    
+    .feature-container {
+        margin: 0 auto;
+        max-width: 34rem;
+        height: 23rem;
+    }
+
+    .services-container {
+        max-width: 30.25rem;
+    }
+
+    #my-image {
+        max-width: 20rem;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .feature-container {
+        margin: 0 auto;
+        max-width: 34rem;
+        height: 24rem;
+    }
+    #contacts {
+        max-width: 25rem;
+    }
+    #company-video{
+        margin-top: -4rem;
+    }
+
+    #my-image {
+        max-width: 28.125rem;
+    }
+
+    .contact-us-information {
+        max-width: 42.125rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    #company-video{
+        max-width: 80rem;
+        margin-top: -4rem;
+    }
+    .feature-container {
+        height: 27rem;
+    }
+}

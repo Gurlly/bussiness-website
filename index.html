@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapWeb</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles/custom-bootstrap.css"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    
+    <!--Business Information-->
+    <header class="container-fluid p-3 bg-primary">
+        <div class="row justify-content-center justify-content-lg-around align-items-center">
+            <div id="contacts" class="col-12 col-lg-11 p-0">
+                <div class="d-flex justify-content-around align-items-center">
+                    <a href="#" class="text-center link-light">
+                        <i class="bi bi-envelope-open"></i> zapweb@example.com
+                    </a>
+                    <p class="text-center m-0 text-white" aria-label="business phone number">
+                        <i class="bi bi-phone"></i> +639179592038
+                    </p>
+                </div>
+            </div>
+            <div class="d-none d-lg-block col-lg-1 p-0">
+                <div id="social-media" class="d-flex justify-content-evenly align-items-center fs-5">
+                    <a href="#" class="text-center link-light ms-4">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" class="text-center link-light ms-4">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="text-center link-light ms-4">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-center link-light ms-4">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!--Navigation Bar-->
+    <nav class="navbar bg-body-tertiary sticky-top py-3 px-1 px-lg-4">
+        <div class="container-fluid">
+          <h1 class="navbar-brand m-0 fw-semibold fs-2" href="#">ZapWeb</h1>
+          <button 
+          class="navbar-toggler border-0" 
+          type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasLink" 
+          aria-controls="offcanvasLink" 
+          aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLink" aria-labelledby="offcanvasLinkLabel">
+            <div class="offcanvas-header">
+              <h1 class="offcanvas-title fs-2 fw-semibold" id="offcanvasLinkLabel">ZapWeb</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body py-0">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link fs-5 fw-medium active" aria-current="true" href="#home">Home</a>
+                  <hr class="my-1">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 fw-medium" href="#about">About</a>
+                    <hr class="my-1">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 fw-medium" href="#services">Services</a>
+                    <hr class="my-1">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 fw-medium" href="#team">Team</a>
+                    <hr class="my-1">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 fw-medium" href="#contact-us">Contact Us</a>
+                    <hr class="my-1">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <section id="home" class="container-fluid mb-4">
+
+        <div class="row mb-5">
+            <div id="hero-banner" class="col-12 p-0">
+                <div id="hero-container" class="d-flex align-items-center p-3 p-md-4 p-lg-5">
+                    <div>
+                        <h2 class="display-4 fw-semibold text-dark">Welcome to <span class="text-primary">ZapWeb</span></h2>
+                        <p class="text-body-secondary fs-4" style="text-align: justify; max-width: 44rem;">
+                            Expert web development for stunning, responsive websites that drive your business success.
+                        </p>
+
+                        <!--buttons-->
+                        <div class="mt-4">
+                            <a type="button" class="btn btn-primary btn-lg text-light fs-4" href="#about">Get Started</a>
+                            <button 
+                            type="button" 
+                            class="btn btn-lg text-primary ms-lg-3 fs-3"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#popupVideo"
+                            >
+                                <i class="bi bi-play-circle"></i> Watch Video
+                            </button>
+
+                            <!-- The Modal -->
+                            <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideoLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content bg-black" data-bs-theme="dark">
+                                        <div class="d-flex flex-column w-100 h-100">
+                                            <div class="d-flex justify-content-end p-3 w-100">
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center flex-grow-1">
+                                                <div class="ratio ratio-16x9" id="company-video">
+                                                    <iframe 
+                                                        class="w-100 h-100"
+                                                        src="https://www.youtube-nocookie.com/embed/uWQ_8CtvzoY?si=BFBucNrVXu1Kv4U4" 
+                                                        title="YouTube video player" 
+                                                        frameborder="0" 
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                                        allowfullscreen>
+                                                    </iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-md-2 row-cols-xxl-4 g-4 p-3 p-lg-5">
+            <div class="col-12 col-md">
+
+                <div class="feature-container px-4 py-5 rounded d-flex justify-content-evenly">
+                    <i class="icon bi bi-laptop"></i>
+                    <h3 class="fw-semibold display-5 my-2">
+                        Lorem
+                    </h3>
+                    <p class="fs-6 fw-normal m-0" style="text-align: justify;">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti illum recusandae explicabo dicta eligendi assumenda minima architecto fugit quasi suscipit provident iste.
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-12 col-md">
+
+                <div class="feature-container px-4 py-5 rounded d-flex justify-content-evenly">
+                    <i class="bi bi-cpu icon"></i>
+                    <h3 class="fw-semibold display-5 my-2">
+                        Labore beatae
+                    </h3>
+                    <p class="fs-6 fw-normal m-0" style="text-align: justify;">
+                        Expedita deleniti mollitia sit, quidem consequatur provident possimus odio ex nisi pariatur tenetur ipsum veniam.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md">
+
+                <div class="feature-container px-4 py-5 rounded d-flex justify-content-evenly">
+                    <i class="bi bi-alipay icon"></i>
+                    <h3 class="fw-semibold display-5 my-2">
+                        Fast Transaction
+                    </h3>
+                    <p class="fs-6 fw-normal m-0" style="text-align: justify;">
+                        Culpa nostrum, provident cumque consectetur obcaecati dolores iste atque eius doloribus accusantium optio soluta possimus.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md">
+
+                <div class="feature-container px-4 py-5 rounded d-flex justify-content-evenly">
+                    <i class="bi bi-shield-check icon"></i>
+                    <h3 class="fw-semibold display-5 my-2">
+                        Protection
+                    </h3>
+                    <p class="fs-6 fw-normal m-0" style="text-align: justify;">
+                        Fuga quasi voluptatibus, deserunt voluptatum saepe illum aspernatur soluta rerum possimus quam necessitatibus ex delectus velit similique minima eligendi sunt facilis iste.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container-fluid my-5">
+        <div class="row mb-3">
+            <div class="col-12 mb-4">
+                <h3 class="px-4 py-3 bg-primary-subtle text-primary fs-5 fw-semibold rounded rounded-5 mb-4 mx-auto" style="width: fit-content;">About Us</h3>
+                <h2 class="text-center display-5 fw-semibold">
+                    Find Out More <br> <span class="text-primary">About Us</span>
+                </h2>
+            </div>
+
+            <div class="col-12 my-5 px-4 px-md-5">
+                <div class="row mt-xl-2 gy-4 gx-xl-5">
+                    <div class="col-12 col-xl-6">
+                        <img class="ratio ratio-4x3 object-fit-cover rounded rounded-4 h-100" src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Meeting">
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <div>
+                            <h3 class="fs-2 fw-semibold" style="text-align: justify;">Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                            <p class="fs-5 fst-italic text-dark-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="d-flex flex-row align-items-center p-3">
+                                <i class="bi bi-code display-4 text-primary me-5 user-select-none"></i>
+                                <div>
+                                    <h4 class="fw-semibold fs-4">
+                                        Ullamco laboris nisi ut aliquip consequat
+                                    </h4>
+                                    <p class="fs-5" style="text-align: justify;">
+                                        Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center p-3 mb-2">
+                                <i class="bi bi-bar-chart-line display-4 text-primary me-5 user-select-none"></i>
+                                <div>
+                                    <h4 class="fw-semibold fs-4">
+                                        Ullamco laboris nisi ut aliquip consequat
+                                    </h4>
+                                    <p class="fs-5" style="text-align: justify;">
+                                        Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="fs-5" style="text-align: justify;">
+                                Ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4 mb-5 px-4 px-md-5">
+                <div class="row mt-xl-2 gy-3 gx-xl-5 px-2 px-lg-4 px-xl-5">
+                    <div class="col-12 col-xl-6">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="fs-5 m-0">HTML</h6>
+                                <p class="fs-5 m-0">100%</p>
+                            </div>
+                            <div class="progress rounded-0 bg-light" role="progressbar" aria-label="Success example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-primary" style="width: 100%"></div>
+                            </div>
+                        </div>   
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="fs-5 m-0">CSS</h6>
+                                <p class="fs-5 m-0">90%</p>
+                            </div>
+                            <div class="progress rounded-0 bg-light" role="progressbar" aria-label="Success example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-primary" style="width: 90%"></div>
+                            </div>
+                        </div> 
+                        <div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="fs-5 m-0">JavaScript</h6>
+                                <p class="fs-5 m-0">70%</p>
+                            </div>
+                            <div class="progress rounded-0 bg-light" role="progressbar" aria-label="Success example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-primary" style="width: 70%"></div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="fs-5 m-0">BootStrap</h6>
+                                <p class="fs-5 m-0">90%</p>
+                            </div>
+                            <div class="progress rounded-0 bg-light" role="progressbar" aria-label="Success example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-primary" style="width: 90%"></div>
+                            </div>
+                        </div>   
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="fs-5 m-0">Angular</h6>
+                                <p class="fs-5 m-0">60%</p>
+                            </div>
+                            <div class="progress rounded-0 bg-light" role="progressbar" aria-label="Success example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-primary" style="width: 60%"></div>
+                            </div>
+                        </div> 
+                        <div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="fs-5 m-0">React</h6>
+                                <p class="fs-5 m-0">65%</p>
+                            </div>
+                            <div class="progress rounded-0 bg-light" role="progressbar" aria-label="Success example" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-primary" style="width: 65%"></div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="container-fluid my-5">
+        <div class="row mb-3">
+            <div class="col-12 mb-4 mt-4">
+                <h3 class="px-4 py-3 bg-primary-subtle text-primary fs-5 fw-semibold rounded rounded-5 mb-4 mx-auto" style="width: fit-content;">Services</h3>
+                <h2 class="text-center display-5 fw-semibold">
+                    Check Our <span class="text-primary">Services</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="row row-cols-lg-2 row-cols-xl-3 mt-xl-5 mb-5 px-4 justify-content-center justify-content-lg-evenly">
+
+            <div class="col-12 col-md-9 col-lg-5 col-xl-3 px-4 py-5 rounded-3 mb-4 services-container">
+                <div class="row gy-3 align-items-center justify-content-center">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <i class="bi bi-activity display-3 text-bg-primary text-light px-3 py-2 rounded-4"></i>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3 class="display-5 fw-semibold my-4">Nesciunt Mete</h3>
+                            <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, libero eius cumque vero.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-5 col-xl-3 px-4 py-5 rounded-3 mb-4 ms-1 services-container">
+                <div class="row gy-3">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <i class="bi bi-chat-left-dots display-3 text-bg-primary text-light px-3 py-2 rounded-4"></i>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3 class="display-5 fw-semibold my-4">24/7 Service</h3>
+                            <p class="fs-6 m-0">Nesciunt rem ducimus quos eligendi ex id similique iste totam consequuntur possimus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-5 col-xl-3 px-4 py-5 rounded-3 mb-4 ms-1 services-container">
+                <div class="row gy-3">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <i class="bi bi-server display-3 text-bg-primary text-light px-3 py-2 rounded-4"></i>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3 class="display-5 fw-semibold my-4">Secure Data</h3>
+                            <p class="fs-6 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.Architecto corporis aut, necessitatibus consequatur atque sequi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-5 col-xl-3 px-4 py-5 rounded-3 mb-4 services-container">
+                <div class="row gy-3">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <i class="bi bi-android display-3 text-bg-primary text-light px-3 py-2 rounded-4"></i>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3 class="display-5 fw-semibold my-4">Crossplatform</h3>
+                            <p class="fs-6 mb-0">Veritatis quasi omnis hic consectetur voluptatibus, odio perspiciatis cum nostrum, tempora incidunt corporis fugit non. Amet, libero eius cumque vero.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-5 col-xl-3 px-4 py-5 rounded-3 mb-4 ms-1 services-container">
+                <div class="row gy-3">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <i class="bi bi-aspect-ratio display-3 text-bg-primary text-light px-3 py-2 rounded-4"></i>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3 class="display-5 fw-semibold my-4">Responsive</h3>
+                            <p class="fs-6 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, libero eius cumque vero.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-5 col-xl-3 px-4 py-5 rounded-3 mb-4 ms-1 services-container">
+                <div class="row gy-3">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <i class="bi bi-basket display-3 text-bg-primary text-light px-3 py-2 rounded-4"></i>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3 class="display-5 fw-semibold my-4">Add to Cart</h3>
+                            <p class="fs-6 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ullam commodi nulla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="team" class="container-fluid my-5">
+        <div class="row mb-3">
+            <div class="col-12 mb-4 mt-4">
+                <h3 class="px-4 py-3 bg-primary-subtle text-primary fs-5 fw-semibold rounded rounded-5 mb-4 mx-auto" style="width: fit-content;">Team</h3>
+                <h2 class="text-center display-5 fw-semibold">
+                    Our Hardworking <br><span class="text-primary">Team</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8" id="my-image">
+                <div class="card">
+                    <a href="https://www.linkedin.com/in/nathanael-martinez-1ab5b2280/" target="_blank"><img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZ_ZPS7wP_4cFkT9C7WutvOf6xDa9fqidWnb3Vlj3FSJDUxMdlRTuRlH6Ag_WFEBbMgQodH5FkUQHSsQQgeAHuALM1Ah_8SuA=s2560" class="card-img-top" alt="Creator Image" style="cursor: pointer;"></a>
+                    <div class="card-body text-center">
+                        <h4 class="fs-5">Nathanael Martinez</h4>
+                        <small class="card-text text-dark-emphasis">Front-end Developer</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="container-fluid my-5">
+        <div class="row mb-3">
+            <div class="col-12 mb-4 mt-4">
+                <h3 class="px-4 py-3 bg-primary-subtle text-primary fs-5 fw-semibold rounded rounded-5 mb-4 mx-auto" style="width: fit-content;">Contact</h3>
+                <h2 class="text-center display-5 fw-semibold">
+                    Need Help? <span class="text-primary">Contact Us</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="row row-cols-xl-2 justify-content-xl-center">
+            <div class="col-12 col-xl-5">
+                <div class="px-3 py-4 border rounded-2 mx-auto shadow contact-us-information">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-geo-alt fs-4 bg-primary-subtle text-primary fw-semibold px-2 py-1 rounded-5"></i>
+                        <div class="ms-3">
+                            <h5 class="mb-1">Address</h5>
+                            <small class="text-dark-emphasis">
+                                123 Dela Cruz St., Barangay Sta. Elena
+                                Marikina City, Metro Manila
+                                1800
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-telephone fs-4 bg-primary-subtle text-primary fw-semibold px-2 py-1 rounded-5"></i>
+                        <div class="ms-3">
+                            <h5 class="mb-1">Call Us</h5>
+                            <small class="text-dark-emphasis">
+                                +63 9179592038
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-envelope fs-4 bg-primary-subtle text-primary fw-semibold px-2 py-1 rounded-5"></i>
+                        <div class="ms-3">
+                            <h5 class="mb-1">Email Us</h5>
+                            <small class="text-dark-emphasis">
+                                <a href="#" class="text-center">
+                                    <i class="bi bi-envelope-open"></i> zapweb@example.com
+                                </a>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="w-full">
+                        <iframe class="rounded-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15440.594563732775!2d121.11668086379815!3d14.647502473509228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b90a3892d7af%3A0x356b9897c9be6bd3!2sSta.%20Elena%20St%2C%20Marikina%2C%201800%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1719226378106!5m2!1sen!2sph" style="width: 100%; height: 18rem; border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-xl-5 my-5 mt-xl-0">
+                <form class="row px-3 py-4 border rounded-2 mx-auto mx-xl-0 shadow contact-us-information">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <div class="contact-form">
+                                    <label for="name" class="form-label">Name:</label>
+                                    <input type="text" class="form-control p-2" id="name" name="name" placeholder="Juan Dela Cruz">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mx-auto">
+                                <div class="contact-form">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input type="email" class="form-control p-2" id="email" name="name" placeholder="Juan@example.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 my-3 mb-md-3">
+                                <div class="contact-form">
+                                    <label for="subject" class="form-label">Subject:</label>
+                                    <input type="text" class="form-control p-2" id="subject" name="subject" placeholder="Meeting">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div class="contact-form">
+                                    <label for="message" class="form-label">Message:</label>
+                                    <textarea class="form-control" id="message" name="message" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary px-4 text-light">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="d-flex flex-column align-items-center justify-content-center border-dark-subtle p-4">
+        <p class="m-0 fw-medium">© Copyright <span class="fw-semibold text-primary">ZapWeb</span> All Rights Reserved</p>
+        <small class="mt-1 text-light-emphasis">Designed by <a class="link-underline-opacity-0" href="https://github.com/Gurlly/front-end-projects.git" target="_blank">Nathanael Martinez</a></small>
+    </footer>
+
+
+</body>
+
+</html>

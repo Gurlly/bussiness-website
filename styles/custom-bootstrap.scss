@@ -1,0 +1,17 @@
+
+// Import required Bootstrap functions
+@import "../node_modules/bootstrap/scss/functions";
+
+// Custom color palette
+$primary: #3498db;
+$secondary: #2ecc71;
+$success: #28a745;
+$danger: #e74c3c;
+$warning: #f39c12;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Import Bootstrap and Bootstrap utilities with custom variables
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
